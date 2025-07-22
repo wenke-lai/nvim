@@ -15,5 +15,8 @@ return {
   ---@type neotree.Config?
   opts = {
     -- add options here
+    window = {
+      width = 26, -- Set sidebar width (default is 30)
+    }
   },
 }
