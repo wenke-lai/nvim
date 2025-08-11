@@ -39,6 +39,7 @@ return {
 - **mason.nvim**: LSP server installer and manager
 - **plenary.nvim**: Lua utility library (dependency for telescope/neo-tree)
 - **nvim-web-devicons**: File type icons
+- **toggleterm.nvim**: Terminal integration with floating window support
 
 ### LSP Structure
 LSP configurations are split into separate files for better organization:
@@ -85,6 +86,12 @@ From README.md:
 - `<leader>e`: Toggle Neo-tree
 - `<leader>o`: Focus Neo-tree
 - `<leader>qq`: Quit all windows
+
+### Terminal (Floating Window)
+- `<Ctrl-\>`: Toggle floating terminal
+- `<leader>t`: Toggle floating terminal
+- `kj` (in terminal mode): Exit to normal mode
+- `<Esc>` (in terminal mode): Exit to normal mode
 
 ### LSP (Language Server Protocol)
 - `gD`: Go to declaration

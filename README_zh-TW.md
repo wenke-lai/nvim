@@ -24,6 +24,7 @@
 | plenary.nvim | https://github.com/nvim-lua/plenary.nvim | Lua 工具函式庫（相依套件） | 自動載入相依套件 | 無 |
 | nvim-web-devicons | https://github.com/nvim-tree/nvim-web-devicons | 檔案類型圖示 | 自動載入相依套件 | 無 |
 | nui.nvim | https://github.com/MunifTanjim/nui.nvim | UI 元件函式庫 | 自動載入相依套件 | 無 |
+| toggleterm.nvim | https://github.com/akinsho/toggleterm.nvim | 終端整合與浮動視窗支援 | `lua/plugins/toggleterm.lua` | 無 |
 
 ## 配置檔案
 
@@ -38,6 +39,7 @@
 - `lua/plugins/lspconfig.lua` - Mason/LSP 安裝器
 - `lua/plugins/python-lsp.lua` - Python 語言伺服器
 - `lua/plugins/svelte-lsp.lua` - Svelte 語言伺服器
+- `lua/plugins/toggleterm.lua` - 終端整合
 
 ## 快捷鍵
 
@@ -54,6 +56,12 @@
 ### Neo-tree（檔案瀏覽器）
 - `<leader>e` - 切換 Neo-tree 開關
 - `<leader>o` - 聚焦到 Neo-tree
+
+### 終端（浮動視窗）
+- `<Ctrl-\>` - 切換浮動終端
+- `<leader>t` - 切換浮動終端
+- `kj`（終端模式）- 退出到一般模式
+- `<Esc>`（終端模式）- 退出到一般模式
 
 ### LSP（語言伺服器協定）
 - `gD` - 跳到宣告

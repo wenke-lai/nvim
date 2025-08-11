@@ -24,6 +24,7 @@
 | plenary.nvim | https://github.com/nvim-lua/plenary.nvim | Lua utility library (dependency) | Auto-loaded dependency | None |
 | nvim-web-devicons | https://github.com/nvim-tree/nvim-web-devicons | File type icons | Auto-loaded dependency | None |
 | nui.nvim | https://github.com/MunifTanjim/nui.nvim | UI component library | Auto-loaded dependency | None |
+| toggleterm.nvim | https://github.com/akinsho/toggleterm.nvim | Terminal integration with floating window support | `lua/plugins/toggleterm.lua` | None |
 
 ## Configuration Files
 
@@ -38,6 +39,7 @@
 - `lua/plugins/lspconfig.lua` - Mason/LSP installer
 - `lua/plugins/python-lsp.lua` - Python LSP
 - `lua/plugins/svelte-lsp.lua` - Svelte LSP
+- `lua/plugins/toggleterm.lua` - Terminal integration
 
 ## Keymaps
 
@@ -54,6 +56,12 @@
 ### Neo-tree (File Explorer)
 - `<leader>e` - Toggle Neo-tree
 - `<leader>o` - Focus Neo-tree
+
+### Terminal (Floating Window)
+- `<Ctrl-\>` - Toggle floating terminal
+- `<leader>t` - Toggle floating terminal
+- `kj` (in terminal mode) - Exit to normal mode
+- `<Esc>` (in terminal mode) - Exit to normal mode
 
 ### LSP (Language Server Protocol)
 - `gD` - Go to declaration
