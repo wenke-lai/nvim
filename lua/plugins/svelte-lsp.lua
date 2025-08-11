@@ -4,6 +4,7 @@ return {
   dependencies = {
     "williamboman/mason.nvim",
     "williamboman/mason-lspconfig.nvim",
+    "nvim-treesitter/nvim-treesitter",
   },
   config = function()
     local lspconfig = require("lspconfig")
@@ -44,6 +45,16 @@ return {
           },
         },
       },
+    })
+
+    -- Auto-format Svelte files with LSP on save
+    local svelte_format_group = vim.api.nvim_create_augroup("SvelteFormat", { clear = true })
+    vim.api.nvim_create_autocmd("BufWritePre", {
+      group = svelte_format_group,
+      pattern = "*.svelte",
+      callback = function()
+        vim.lsp.buf.format({ async = false })
+      end,
     })
   end,
 }

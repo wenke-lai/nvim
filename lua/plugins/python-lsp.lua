@@ -37,5 +37,17 @@ return {
         },
       },
     })
+
+    -- Auto-format Python files with ruff on save
+    local python_format_group = vim.api.nvim_create_augroup("PythonFormat", { clear = true })
+    vim.api.nvim_create_autocmd("BufWritePre", {
+      group = python_format_group,
+      pattern = "*.py",
+      callback = function()
+        vim.cmd("silent !ruff format " .. vim.fn.shellescape(vim.fn.expand("%")))
+        vim.cmd("silent !ruff check --fix " .. vim.fn.shellescape(vim.fn.expand("%")))
+        vim.cmd("edit") -- Reload the file to show changes
+      end,
+    })
   end,
 }
