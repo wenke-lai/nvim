@@ -2,6 +2,20 @@ return {
   "neovim/nvim-lspconfig",
   opts = {
     servers = {
+      pyright = {
+        handlers = {
+          -- 過濾掉所有 pyright 的診斷訊息
+          ["textDocument/publishDiagnostics"] = function() end,
+        },
+        settings = {
+          python = {
+            analysis = {
+              typeCheckingMode = "off",
+              diagnosticMode = "off",
+            },
+          },
+        },
+      },
       ["*"] = {
         keys = {
           {
