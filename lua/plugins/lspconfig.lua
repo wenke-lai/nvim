@@ -16,6 +16,11 @@ return {
           },
         },
       },
+      svelte = {
+        handlers = {
+          ["textDocument/publishDiagnostics"] = function() end,
+        },
+      },
       ["*"] = {
         keys = {
           {
