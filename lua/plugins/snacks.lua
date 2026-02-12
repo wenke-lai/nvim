@@ -15,6 +15,13 @@ return {
           include = {
             ".env",
           },
+          win = {
+            list = {
+              keys = {
+                ["<Esc>"] = false,
+              },
+            },
+          },
           layout = {
             layout = {
               width = 25, -- 設定 explorer 寬度
